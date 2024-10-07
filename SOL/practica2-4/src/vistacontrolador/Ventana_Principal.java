@@ -99,11 +99,22 @@ public class Ventana_Principal extends javax.swing.JFrame {
             }
         });
 
+        Caja_Texto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Caja_TextoActionPerformed(evt);
+            }
+        });
+
         Combobox_items.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Combobox_items.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Combobox_itemsActionPerformed(evt);
+            }
+        });
 
         Texto_Correo.setText("Correo");
 
-        Boton_pulsar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_off.png"))); // NOI18N
+        Boton_pulsar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Paul\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\\SOL\\practica2-4\\src\\vistacontrolador\\b_off.png")); // NOI18N
         Boton_pulsar.setSelected(true);
         Boton_pulsar.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -129,11 +140,16 @@ public class Ventana_Principal extends javax.swing.JFrame {
         Boton_check_op6_espejo.setText("Opcion 6");
         Boton_check_op6_espejo.setEnabled(false);
 
+        Caja_texto_espejo.setEnabled(false);
+
+        Spinner_espejo.setEnabled(false);
+
         Combobox_items_espejo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        Combobox_items_espejo.setEnabled(false);
 
         Texto_Correo_espejo.setText("Correo");
 
-        Boton_pulsar_espejo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_off.png"))); // NOI18N
+        Boton_pulsar_espejo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Paul\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\\SOL\\practica2-4\\src\\vistacontrolador\\b_off.png")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -293,6 +309,14 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private void Boton_radio_op3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op3ActionPerformed
          Boton_radio_op3_espejo.setSelected(Boton_radio_op3.isSelected());
     }//GEN-LAST:event_Boton_radio_op3ActionPerformed
+
+    private void Caja_TextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja_TextoActionPerformed
+        Caja_texto_espejo.setText(Caja_Texto.getText());
+    }//GEN-LAST:event_Caja_TextoActionPerformed
+
+    private void Combobox_itemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Combobox_itemsActionPerformed
+        Combobox_items_espejo.setSelectedItem(Combobox_items.getSelectedItem());
+    }//GEN-LAST:event_Combobox_itemsActionPerformed
 
     /**
      * @param args the command line arguments

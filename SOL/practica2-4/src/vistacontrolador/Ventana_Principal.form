@@ -237,6 +237,9 @@
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="Caja_Texto">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Caja_TextoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="Combobox_items">
       <Properties>
@@ -249,6 +252,9 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Combobox_itemsActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
@@ -267,7 +273,7 @@
     <Component class="javax.swing.JToggleButton" name="Boton_pulsar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/vistacontrolador/b_off.png"/>
+          <Image iconType="2" name="C:\Users\Paul\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\SOL\practica2-4\src\vistacontrolador\b_off.png"/>
         </Property>
         <Property name="selected" type="boolean" value="true"/>
       </Properties>
@@ -312,10 +318,16 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="Caja_texto_espejo">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JSlider" name="Barra_deslizante_espejo">
     </Component>
     <Component class="javax.swing.JSpinner" name="Spinner_espejo">
+      <Properties>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="Combobox_items_espejo">
       <Properties>
@@ -327,6 +339,7 @@
             <StringItem index="3" value="Item 4"/>
           </StringArray>
         </Property>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -342,7 +355,7 @@
     <Component class="javax.swing.JToggleButton" name="Boton_pulsar_espejo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/vistacontrolador/b_off.png"/>
+          <Image iconType="2" name="C:\Users\Paul\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\SOL\practica2-4\src\vistacontrolador\b_off.png"/>
         </Property>
       </Properties>
     </Component>
