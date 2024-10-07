@@ -27,8 +27,8 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         Boton_radio_op1 = new javax.swing.JRadioButton();
-        Boton_radio_op2 = new javax.swing.JRadioButton();
         Boton_radio_op3 = new javax.swing.JRadioButton();
+        Boton_radio_op2 = new javax.swing.JRadioButton();
         Boton_check_op4 = new javax.swing.JCheckBox();
         Boton_check_op5 = new javax.swing.JCheckBox();
         Boton_check_op6 = new javax.swing.JCheckBox();
@@ -52,6 +52,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
         Caja_correo_espejo = new javax.swing.JTextField();
         Texto_Correo_espejo = new javax.swing.JLabel();
         Boton_pulsar_espejo = new javax.swing.JToggleButton();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -63,9 +64,19 @@ public class Ventana_Principal extends javax.swing.JFrame {
             }
         });
 
-        Boton_radio_op2.setText("Opcion 3");
+        Boton_radio_op3.setText("Opcion 3");
+        Boton_radio_op3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_radio_op3ActionPerformed(evt);
+            }
+        });
 
-        Boton_radio_op3.setText("Opcion 2");
+        Boton_radio_op2.setText("Opcion 2");
+        Boton_radio_op2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_radio_op2ActionPerformed(evt);
+            }
+        });
 
         Boton_check_op4.setText("Opcion 4");
         Boton_check_op4.addActionListener(new java.awt.event.ActionListener() {
@@ -101,16 +112,22 @@ public class Ventana_Principal extends javax.swing.JFrame {
         });
 
         Boton_radio_op1_espejo.setText("Opcion 1");
+        Boton_radio_op1_espejo.setEnabled(false);
 
         Boton_radio_op2_espejo.setText("Opcion 2");
+        Boton_radio_op2_espejo.setEnabled(false);
 
         Boton_radio_op3_espejo.setText("Opcion 3");
+        Boton_radio_op3_espejo.setEnabled(false);
 
         Boton_check_op4_espejo.setText("Opcion 4");
+        Boton_check_op4_espejo.setEnabled(false);
 
         Boton_check_op5_espejo.setText("Opcion 5");
+        Boton_check_op5_espejo.setEnabled(false);
 
         Boton_check_op6_espejo.setText("Opcion 6");
+        Boton_check_op6_espejo.setEnabled(false);
 
         Combobox_items_espejo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -134,7 +151,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
                                         .addGap(37, 37, 37)
                                         .addComponent(Boton_check_op4))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(Boton_radio_op3)
+                                        .addComponent(Boton_radio_op2)
                                         .addGap(37, 37, 37)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(Boton_check_op6)
@@ -167,7 +184,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
                                         .addGap(84, 84, 84)
                                         .addComponent(Caja_correo_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(Boton_radio_op2)
+                                .addComponent(Boton_radio_op3)
                                 .addGap(142, 142, 142)
                                 .addComponent(Combobox_items, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
@@ -187,6 +204,9 @@ public class Ventana_Principal extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(Boton_pulsar_espejo)
                         .addGap(62, 62, 62))))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,18 +223,20 @@ public class Ventana_Principal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Boton_check_op5)
                             .addComponent(Spinner_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton_radio_op3))
+                            .addComponent(Boton_radio_op2))
                         .addGap(21, 21, 21)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Boton_check_op6)
                             .addComponent(Combobox_items, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton_radio_op2))
+                            .addComponent(Boton_radio_op3))
                         .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Caja_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(Texto_Correo)))
                     .addComponent(Boton_pulsar))
-                .addGap(130, 130, 130)
+                .addGap(57, 57, 57)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -245,15 +267,15 @@ public class Ventana_Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Boton_check_op4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_check_op4ActionPerformed
-        // TODO add your handling code here:
+       Boton_check_op4_espejo.setSelected(Boton_check_op4.isSelected());
     }//GEN-LAST:event_Boton_check_op4ActionPerformed
 
     private void Boton_check_op5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_check_op5ActionPerformed
-        // TODO add your handling code here:
+        Boton_check_op5_espejo.setSelected(Boton_check_op5.isSelected());
     }//GEN-LAST:event_Boton_check_op5ActionPerformed
 
     private void Boton_check_op6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_check_op6ActionPerformed
-        // TODO add your handling code here:
+        Boton_check_op6_espejo.setSelected(Boton_check_op6.isSelected());
     }//GEN-LAST:event_Boton_check_op6ActionPerformed
 
     private void Boton_pulsarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_Boton_pulsarItemStateChanged
@@ -261,12 +283,16 @@ public class Ventana_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_pulsarItemStateChanged
 
     private void Boton_radio_op1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op1ActionPerformed
-        if( Boton_radio_op1_espejo.getVerifyInputWhenFocusTarget()){
-            Boton_radio_op1_espejo.setSelected(true);
-        }
-        Boton_radio_op1_espejo.setSelected(false);
-        
+        Boton_radio_op1_espejo.setSelected(Boton_radio_op1.isSelected());
     }//GEN-LAST:event_Boton_radio_op1ActionPerformed
+
+    private void Boton_radio_op2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op2ActionPerformed
+       Boton_radio_op2_espejo.setSelected(Boton_radio_op2.isSelected());
+    }//GEN-LAST:event_Boton_radio_op2ActionPerformed
+
+    private void Boton_radio_op3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op3ActionPerformed
+         Boton_radio_op3_espejo.setSelected(Boton_radio_op3.isSelected());
+    }//GEN-LAST:event_Boton_radio_op3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,5 +356,6 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private javax.swing.JSpinner Spinner_espejo;
     private javax.swing.JLabel Texto_Correo;
     private javax.swing.JLabel Texto_Correo_espejo;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

@@ -37,7 +37,7 @@
                                       <Component id="Boton_check_op4" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="Boton_radio_op3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Boton_radio_op2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="Boton_check_op6" min="-2" max="-2" attributes="0"/>
@@ -83,7 +83,7 @@
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="Boton_radio_op2" min="-2" max="-2" attributes="0"/>
+                              <Component id="Boton_radio_op3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
                               <Component id="Combobox_items" min="-2" pref="91" max="-2" attributes="0"/>
                           </Group>
@@ -113,6 +113,10 @@
                   </Group>
               </Group>
           </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jSeparator1" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -131,13 +135,13 @@
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Boton_check_op5" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Spinner_1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Boton_radio_op3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Boton_radio_op2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="Boton_check_op6" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Combobox_items" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Boton_radio_op2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="Boton_radio_op3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -147,7 +151,9 @@
                   </Group>
                   <Component id="Boton_pulsar" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -190,15 +196,21 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_radio_op1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="Boton_radio_op2">
+    <Component class="javax.swing.JRadioButton" name="Boton_radio_op3">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opcion 3"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_radio_op3ActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="Boton_radio_op3">
+    <Component class="javax.swing.JRadioButton" name="Boton_radio_op2">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opcion 2"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_radio_op2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="Boton_check_op4">
       <Properties>
@@ -266,31 +278,37 @@
     <Component class="javax.swing.JRadioButton" name="Boton_radio_op1_espejo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opcion 1"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="Boton_radio_op2_espejo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opcion 2"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="Boton_radio_op3_espejo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opcion 3"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="Boton_check_op4_espejo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opcion 4"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="Boton_check_op5_espejo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opcion 5"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="Boton_check_op6_espejo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Opcion 6"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="Caja_texto_espejo">
@@ -327,6 +345,8 @@
           <Image iconType="3" name="/vistacontrolador/b_off.png"/>
         </Property>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
   </SubComponents>
 </Form>
