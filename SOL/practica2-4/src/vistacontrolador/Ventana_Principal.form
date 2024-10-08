@@ -119,7 +119,6 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Component id="jProgressBar1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -185,8 +184,7 @@
                   <Component id="Caja_correo_espejo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Texto_Correo_espejo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="47" max="32767" attributes="0"/>
-              <Component id="jProgressBar1" min="-2" pref="24" max="-2" attributes="0"/>
+              <EmptySpace pref="71" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -243,6 +241,7 @@
     <Component class="javax.swing.JTextField" name="Caja_Texto">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Caja_TextoActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Caja_TextoKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="Combobox_items">
@@ -276,6 +275,7 @@
     <Component class="javax.swing.JTextField" name="Caja_correo">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Caja_correoActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Caja_correoKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JSlider" name="Barra_deslizante">
@@ -286,12 +286,16 @@
     <Component class="javax.swing.JToggleButton" name="Boton_pulsar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Paul\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\SOL\practica2-4\src\vistacontrolador\b_off.png"/>
+          <Image iconType="3" name="/vistacontrolador/b_off.png"/>
         </Property>
-        <Property name="selected" type="boolean" value="true"/>
+        <Property name="rolloverEnabled" type="boolean" value="false"/>
+        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/vistacontrolador/b_on.png"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="Boton_pulsarItemStateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_pulsarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="Boton_radio_op1_espejo">
@@ -375,14 +379,16 @@
     <Component class="javax.swing.JToggleButton" name="Boton_pulsar_espejo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Paul\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\SOL\practica2-4\src\vistacontrolador\b_off.png"/>
+          <Image iconType="3" name="/vistacontrolador/b_off.png"/>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
+        <Property name="rolloverEnabled" type="boolean" value="false"/>
+        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/vistacontrolador/b_on.png"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
-    </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar1">
     </Component>
   </SubComponents>
 </Form>

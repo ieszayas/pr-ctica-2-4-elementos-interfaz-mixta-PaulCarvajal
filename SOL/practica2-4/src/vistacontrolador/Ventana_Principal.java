@@ -8,6 +8,7 @@ import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 
 /**
@@ -59,7 +60,6 @@ public class Ventana_Principal extends javax.swing.JFrame {
         Texto_Correo_espejo = new javax.swing.JLabel();
         Boton_pulsar_espejo = new javax.swing.JToggleButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jProgressBar1 = new javax.swing.JProgressBar();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -111,6 +111,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 Caja_TextoActionPerformed(evt);
             }
         });
+        Caja_Texto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Caja_TextoKeyReleased(evt);
+            }
+        });
 
         Combobox_items.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         Combobox_items.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +137,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 Caja_correoActionPerformed(evt);
             }
         });
+        Caja_correo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Caja_correoKeyReleased(evt);
+            }
+        });
 
         Barra_deslizante.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -139,11 +149,17 @@ public class Ventana_Principal extends javax.swing.JFrame {
             }
         });
 
-        Boton_pulsar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Paul\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\\SOL\\practica2-4\\src\\vistacontrolador\\b_off.png")); // NOI18N
-        Boton_pulsar.setSelected(true);
+        Boton_pulsar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_off.png"))); // NOI18N
+        Boton_pulsar.setRolloverEnabled(false);
+        Boton_pulsar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_on.png"))); // NOI18N
         Boton_pulsar.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 Boton_pulsarItemStateChanged(evt);
+            }
+        });
+        Boton_pulsar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_pulsarActionPerformed(evt);
             }
         });
 
@@ -179,8 +195,10 @@ public class Ventana_Principal extends javax.swing.JFrame {
         Texto_Correo_espejo.setText("Correo");
         Texto_Correo_espejo.setEnabled(false);
 
-        Boton_pulsar_espejo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Paul\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\\SOL\\practica2-4\\src\\vistacontrolador\\b_off.png")); // NOI18N
+        Boton_pulsar_espejo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_off.png"))); // NOI18N
         Boton_pulsar_espejo.setEnabled(false);
+        Boton_pulsar_espejo.setRolloverEnabled(false);
+        Boton_pulsar_espejo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_on.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -256,7 +274,6 @@ public class Ventana_Principal extends javax.swing.JFrame {
                         .addGap(62, 62, 62))
                     .addComponent(Barra_deslizante_espejo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
-            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -309,8 +326,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Caja_correo_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Texto_Correo_espejo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         pack();
@@ -330,18 +346,18 @@ public class Ventana_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_check_op6ActionPerformed
 
     private void Boton_pulsarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_Boton_pulsarItemStateChanged
-        ImageIcon apagado = new ImageIcon("./src/vistacontrolador/b_off.png");
-        ImageIcon prendido = new ImageIcon("./src/vistacontrolador/b_on.png");
+//        ImageIcon apagado = new ImageIcon("./src/vistacontrolador/b_off.png");
+//        ImageIcon prendido = new ImageIcon("./src/vistacontrolador/b_on.png");
+//
+//        if (!Boton_pulsar.isSelected()) {
+//            Boton_pulsar.setIcon(apagado);
+//
+//        } else {
+//            Boton_pulsar.setIcon(prendido);
+//        }
+//
+//        Boton_pulsar_espejo.setIcon(Boton_pulsar.getIcon());
 
-        if (!Boton_pulsar.isSelected()) {
-            Boton_pulsar.setIcon(apagado);
-            
-        }else{
-            Boton_pulsar.setIcon(prendido);
-        }
-
-        Boton_pulsar_espejo.setIcon(Boton_pulsar.getIcon());
-        
     }//GEN-LAST:event_Boton_pulsarItemStateChanged
 
     private void Boton_radio_op1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op1ActionPerformed
@@ -358,11 +374,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
 
     private void Caja_TextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja_TextoActionPerformed
         String str = "";
-        for (int i = Caja_Texto.getText().length()-1;  i >= 0; i--) {
+        for (int i = Caja_Texto.getText().length() - 1; i >= 0; i--) {
             str = str + Caja_Texto.getText().charAt(i);
         }
         Caja_texto_espejo.setText(str);
-           
+
 //        Existe una clase que tiene un metodo para invertir un string directamente
 //        String palabraInvertida = new StringBuilder(Caja_Texto.getText()).reverse().toString();
 //        Caja_texto_espejo.setText(palabraInvertida);
@@ -381,11 +397,47 @@ public class Ventana_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Barra_deslizanteStateChanged
 
     private void Caja_correoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja_correoActionPerformed
-        Caja_correo_espejo.setText(Caja_correo.getText());
-        Border bordeRojo = BorderFactory.createLineBorder(Color.RED, 2);
-        
-        Caja_correo.setBorder(bordeRojo);
+//        Caja_correo_espejo.setText(Caja_correo.getText());
+//        Border bordeRojo = BorderFactory.createLineBorder(Color.RED, 2);
+//        
+//        Caja_correo.setBorder(bordeRojo);
+
     }//GEN-LAST:event_Caja_correoActionPerformed
+
+    private void Caja_correoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Caja_correoKeyReleased
+        Caja_correo_espejo.setText(Caja_correo.getText());
+
+        String valido = "@hotmail.com";
+        String regex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+        Border defecto = BorderFactory.createLineBorder(Color.black);
+
+        if (!Caja_correo.getText().matches(regex)) {
+            Border bordeRojo = BorderFactory.createLineBorder(Color.RED, 2);
+            Caja_correo.setBorder(bordeRojo);
+        } else {
+            Caja_correo.setBorder(defecto);
+            System.out.println("BIEN");
+        }
+    }//GEN-LAST:event_Caja_correoKeyReleased
+
+    private void Caja_TextoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Caja_TextoKeyReleased
+        String str = "";
+        for (int i = Caja_Texto.getText().length() - 1; i >= 0; i--) {
+            str = str + Caja_Texto.getText().charAt(i);
+        }
+        Caja_texto_espejo.setText(str);
+
+//        Existe una clase que tiene un metodo para invertir un string directamente
+//        String palabraInvertida = new StringBuilder(Caja_Texto.getText()).reverse().toString();
+//        Caja_texto_espejo.setText(palabraInvertida);
+        //Validacion de campo @hotmail.com
+
+    }//GEN-LAST:event_Caja_TextoKeyReleased
+
+    private void Boton_pulsarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_pulsarActionPerformed
+        //Apartado propiedades, cambiar el selectIcon a la imagen de prender y actualizar la el boton espejo en la accion
+        Boton_pulsar_espejo.setSelected(Boton_pulsar.isSelected());
+    }//GEN-LAST:event_Boton_pulsarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -449,7 +501,6 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private javax.swing.JSpinner Spinner_espejo;
     private javax.swing.JLabel Texto_Correo;
     private javax.swing.JLabel Texto_Correo_espejo;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
