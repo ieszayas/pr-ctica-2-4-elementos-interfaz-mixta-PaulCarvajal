@@ -8,6 +8,7 @@ import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 import javax.swing.border.Border;
 
 /**
@@ -21,6 +22,10 @@ public class Ventana_Principal extends javax.swing.JFrame {
      */
     public Ventana_Principal() {
         initComponents();
+        Imagen_Check.setVisible(false);
+        Imagen_Check_espejo.setVisible(false);
+        Texto_Confirmacion.setVisible(false);
+        Texto_Confirmacion_espejo.setVisible(false);
     }
 
     /**
@@ -59,7 +64,10 @@ public class Ventana_Principal extends javax.swing.JFrame {
         Texto_Correo_espejo = new javax.swing.JLabel();
         Boton_pulsar_espejo = new javax.swing.JToggleButton();
         jSeparator1 = new javax.swing.JSeparator();
-        jProgressBar1 = new javax.swing.JProgressBar();
+        Imagen_Check = new javax.swing.JLabel();
+        Texto_Confirmacion = new javax.swing.JLabel();
+        Imagen_Check_espejo = new javax.swing.JLabel();
+        Texto_Confirmacion_espejo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -111,6 +119,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 Caja_TextoActionPerformed(evt);
             }
         });
+        Caja_Texto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Caja_TextoKeyReleased(evt);
+            }
+        });
 
         Combobox_items.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         Combobox_items.addActionListener(new java.awt.event.ActionListener() {
@@ -132,6 +145,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 Caja_correoActionPerformed(evt);
             }
         });
+        Caja_correo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                Caja_correoKeyReleased(evt);
+            }
+        });
 
         Barra_deslizante.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -139,11 +157,17 @@ public class Ventana_Principal extends javax.swing.JFrame {
             }
         });
 
-        Boton_pulsar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Paul\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\\SOL\\practica2-4\\src\\vistacontrolador\\b_off.png")); // NOI18N
-        Boton_pulsar.setSelected(true);
+        Boton_pulsar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_off.png"))); // NOI18N
+        Boton_pulsar.setRolloverEnabled(false);
+        Boton_pulsar.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_on.png"))); // NOI18N
         Boton_pulsar.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 Boton_pulsarItemStateChanged(evt);
+            }
+        });
+        Boton_pulsar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Boton_pulsarActionPerformed(evt);
             }
         });
 
@@ -179,14 +203,66 @@ public class Ventana_Principal extends javax.swing.JFrame {
         Texto_Correo_espejo.setText("Correo");
         Texto_Correo_espejo.setEnabled(false);
 
-        Boton_pulsar_espejo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Paul\\Documents\\GitHub\\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\\SOL\\practica2-4\\src\\vistacontrolador\\b_off.png")); // NOI18N
+        Boton_pulsar_espejo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_off.png"))); // NOI18N
         Boton_pulsar_espejo.setEnabled(false);
+        Boton_pulsar_espejo.setRolloverEnabled(false);
+        Boton_pulsar_espejo.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/b_on.png"))); // NOI18N
+
+        Imagen_Check.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/Check_chiquito.jpg"))); // NOI18N
+
+        Texto_Confirmacion.setText("Correo verificado correctamente");
+
+        Imagen_Check_espejo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistacontrolador/Check_chiquito.jpg"))); // NOI18N
+
+        Texto_Confirmacion_espejo.setText("Correo verificado correctamente");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Boton_radio_op1_espejo)
+                    .addComponent(Boton_radio_op2_espejo)
+                    .addComponent(Boton_radio_op3_espejo)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(Texto_Correo_espejo)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Boton_check_op4_espejo)
+                            .addComponent(Boton_check_op5_espejo)
+                            .addComponent(Boton_check_op6_espejo))
+                        .addGap(34, 34, 34)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Spinner_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Caja_texto_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Combobox_items_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(Caja_correo_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Boton_pulsar_espejo)
+                                .addGap(62, 62, 62))
+                            .addComponent(Barra_deslizante_espejo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(Imagen_Check_espejo)
+                        .addGap(18, 18, 18)
+                        .addComponent(Texto_Confirmacion_espejo)
+                        .addContainerGap(12, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(17, 17, 17)
@@ -216,47 +292,20 @@ public class Ventana_Principal extends javax.swing.JFrame {
                         .addComponent(Texto_Correo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Caja_correo, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Boton_pulsar)
-                        .addGap(67, 67, 67))
-                    .addComponent(Barra_deslizante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator1))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Boton_radio_op1_espejo)
-                    .addComponent(Boton_radio_op2_espejo)
-                    .addComponent(Boton_radio_op3_espejo)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(Texto_Correo_espejo)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Barra_deslizante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(Boton_pulsar)
+                                .addGap(67, 67, 67))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Boton_check_op4_espejo)
-                            .addComponent(Boton_check_op5_espejo)
-                            .addComponent(Boton_check_op6_espejo))
-                        .addGap(34, 34, 34)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Spinner_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Caja_texto_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Combobox_items_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(Caja_correo_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Boton_pulsar_espejo)
-                        .addGap(62, 62, 62))
-                    .addComponent(Barra_deslizante_espejo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
-            .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Imagen_Check)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Texto_Confirmacion)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,13 +327,16 @@ public class Ventana_Principal extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Boton_check_op6)
                             .addComponent(Combobox_items, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Boton_radio_op3))
-                        .addGap(61, 61, 61)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Caja_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Texto_Correo)))
+                            .addComponent(Boton_radio_op3)))
                     .addComponent(Boton_pulsar))
-                .addGap(57, 57, 57)
+                .addGap(61, 61, 61)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Caja_correo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Texto_Correo))
+                    .addComponent(Imagen_Check, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Texto_Confirmacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -308,9 +360,10 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Caja_correo_espejo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Texto_Correo_espejo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Texto_Correo_espejo)
+                    .addComponent(Imagen_Check_espejo)
+                    .addComponent(Texto_Confirmacion_espejo))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         pack();
@@ -330,18 +383,18 @@ public class Ventana_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Boton_check_op6ActionPerformed
 
     private void Boton_pulsarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_Boton_pulsarItemStateChanged
-        ImageIcon apagado = new ImageIcon("./src/vistacontrolador/b_off.png");
-        ImageIcon prendido = new ImageIcon("./src/vistacontrolador/b_on.png");
+//        ImageIcon apagado = new ImageIcon("./src/vistacontrolador/b_off.png");
+//        ImageIcon prendido = new ImageIcon("./src/vistacontrolador/b_on.png");
+//
+//        if (!Boton_pulsar.isSelected()) {
+//            Boton_pulsar.setIcon(apagado);
+//
+//        } else {
+//            Boton_pulsar.setIcon(prendido);
+//        }
+//
+//        Boton_pulsar_espejo.setIcon(Boton_pulsar.getIcon());
 
-        if (!Boton_pulsar.isSelected()) {
-            Boton_pulsar.setIcon(apagado);
-            
-        }else{
-            Boton_pulsar.setIcon(prendido);
-        }
-
-        Boton_pulsar_espejo.setIcon(Boton_pulsar.getIcon());
-        
     }//GEN-LAST:event_Boton_pulsarItemStateChanged
 
     private void Boton_radio_op1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op1ActionPerformed
@@ -358,11 +411,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
 
     private void Caja_TextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja_TextoActionPerformed
         String str = "";
-        for (int i = Caja_Texto.getText().length()-1;  i >= 0; i--) {
+        for (int i = Caja_Texto.getText().length() - 1; i >= 0; i--) {
             str = str + Caja_Texto.getText().charAt(i);
         }
         Caja_texto_espejo.setText(str);
-           
+
 //        Existe una clase que tiene un metodo para invertir un string directamente
 //        String palabraInvertida = new StringBuilder(Caja_Texto.getText()).reverse().toString();
 //        Caja_texto_espejo.setText(palabraInvertida);
@@ -381,11 +434,57 @@ public class Ventana_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_Barra_deslizanteStateChanged
 
     private void Caja_correoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja_correoActionPerformed
-        Caja_correo_espejo.setText(Caja_correo.getText());
-        Border bordeRojo = BorderFactory.createLineBorder(Color.RED, 2);
-        
-        Caja_correo.setBorder(bordeRojo);
+//        Caja_correo_espejo.setText(Caja_correo.getText());
+//        Border bordeRojo = BorderFactory.createLineBorder(Color.RED, 2);
+//        
+//        Caja_correo.setBorder(bordeRojo);
+
     }//GEN-LAST:event_Caja_correoActionPerformed
+
+    private void Caja_correoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Caja_correoKeyReleased
+        Caja_correo_espejo.setText(Caja_correo.getText());
+
+        String valido = "@hotmail.com";
+        String regex = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$";
+        Border defecto = BorderFactory.createLineBorder(Color.green, 2);
+
+        if (!Caja_correo.getText().matches(regex)) {
+            Border bordeRojo = BorderFactory.createLineBorder(Color.RED, 2);
+            Caja_correo.setBorder(bordeRojo);
+            Imagen_Check.setVisible(false);
+            Imagen_Check_espejo.setVisible(false);
+            Texto_Confirmacion.setVisible(false);
+            Texto_Confirmacion_espejo.setVisible(false);
+
+        } else {
+            Caja_correo.setBorder(defecto);
+            Imagen_Check.setVisible(true);
+            Imagen_Check_espejo.setVisible(true);
+            Texto_Confirmacion.setVisible(true);
+            Texto_Confirmacion_espejo.setVisible(true);
+            return;
+        }
+
+    }//GEN-LAST:event_Caja_correoKeyReleased
+
+    private void Caja_TextoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_Caja_TextoKeyReleased
+        String str = "";
+        for (int i = Caja_Texto.getText().length() - 1; i >= 0; i--) {
+            str = str + Caja_Texto.getText().charAt(i);
+        }
+        Caja_texto_espejo.setText(str);
+
+//        Existe una clase que tiene un metodo para invertir un string directamente
+//        String palabraInvertida = new StringBuilder(Caja_Texto.getText()).reverse().toString();
+//        Caja_texto_espejo.setText(palabraInvertida);
+        //Validacion de campo @hotmail.com
+
+    }//GEN-LAST:event_Caja_TextoKeyReleased
+
+    private void Boton_pulsarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_pulsarActionPerformed
+        //Apartado propiedades, cambiar el selectIcon a la imagen de prender y actualizar la el boton espejo en la accion
+        Boton_pulsar_espejo.setSelected(Boton_pulsar.isSelected());
+    }//GEN-LAST:event_Boton_pulsarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -445,11 +544,14 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private javax.swing.JTextField Caja_texto_espejo;
     private javax.swing.JComboBox<String> Combobox_items;
     private javax.swing.JComboBox<String> Combobox_items_espejo;
+    private javax.swing.JLabel Imagen_Check;
+    private javax.swing.JLabel Imagen_Check_espejo;
     private javax.swing.JSpinner Spinner_1;
     private javax.swing.JSpinner Spinner_espejo;
+    private javax.swing.JLabel Texto_Confirmacion;
+    private javax.swing.JLabel Texto_Confirmacion_espejo;
     private javax.swing.JLabel Texto_Correo;
     private javax.swing.JLabel Texto_Correo_espejo;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

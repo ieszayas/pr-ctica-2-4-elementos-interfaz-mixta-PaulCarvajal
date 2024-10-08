@@ -25,6 +25,62 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jSeparator1" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="Boton_radio_op1_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="Boton_radio_op2_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="Boton_radio_op3_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="Texto_Correo_espejo" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Boton_check_op4_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Boton_check_op5_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="Boton_check_op6_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="Spinner_espejo" min="-2" max="-2" attributes="0"/>
+                          <Component id="Caja_texto_espejo" min="-2" pref="154" max="-2" attributes="0"/>
+                          <Component id="Combobox_items_espejo" min="-2" pref="91" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                      <Component id="Caja_correo_espejo" min="-2" pref="212" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="Boton_pulsar_espejo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="Barra_deslizante_espejo" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="Imagen_Check_espejo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="Texto_Confirmacion_espejo" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
@@ -65,61 +121,26 @@
                       <Component id="Caja_correo" min="-2" pref="212" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="Boton_pulsar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="Barra_deslizante" alignment="1" min="-2" pref="206" max="-2" attributes="0"/>
-              </Group>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jSeparator1" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Boton_radio_op1_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="Boton_radio_op2_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="Boton_radio_op3_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="Texto_Correo_espejo" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Boton_check_op4_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Boton_check_op5_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="Boton_check_op6_espejo" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Spinner_espejo" min="-2" max="-2" attributes="0"/>
-                          <Component id="Caja_texto_espejo" min="-2" pref="154" max="-2" attributes="0"/>
-                          <Component id="Combobox_items_espejo" min="-2" pref="91" max="-2" attributes="0"/>
+                          <Component id="Barra_deslizante" alignment="1" min="-2" pref="206" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="Boton_pulsar" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                      <Component id="Caja_correo_espejo" min="-2" pref="212" max="-2" attributes="0"/>
+                      <Component id="Imagen_Check" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="Texto_Confirmacion" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="Boton_pulsar_espejo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="Barra_deslizante_espejo" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
-          <Component id="jProgressBar1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -132,7 +153,7 @@
                   <Component id="Caja_Texto" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Barra_deslizante" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -146,15 +167,19 @@
                           <Component id="Combobox_items" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="Boton_radio_op3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="Caja_correo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Texto_Correo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
                   <Component id="Boton_pulsar" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="Caja_correo" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Texto_Correo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="Imagen_Check" max="32767" attributes="0"/>
+                  <Component id="Texto_Confirmacion" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace pref="61" max="32767" attributes="0"/>
               <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -184,9 +209,10 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="Caja_correo_espejo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Texto_Correo_espejo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Imagen_Check_espejo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Texto_Confirmacion_espejo" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="47" max="32767" attributes="0"/>
-              <Component id="jProgressBar1" min="-2" pref="24" max="-2" attributes="0"/>
+              <EmptySpace pref="61" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -243,6 +269,7 @@
     <Component class="javax.swing.JTextField" name="Caja_Texto">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Caja_TextoActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Caja_TextoKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="Combobox_items">
@@ -276,6 +303,7 @@
     <Component class="javax.swing.JTextField" name="Caja_correo">
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Caja_correoActionPerformed"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Caja_correoKeyReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JSlider" name="Barra_deslizante">
@@ -286,12 +314,16 @@
     <Component class="javax.swing.JToggleButton" name="Boton_pulsar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Paul\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\SOL\practica2-4\src\vistacontrolador\b_off.png"/>
+          <Image iconType="3" name="/vistacontrolador/b_off.png"/>
         </Property>
-        <Property name="selected" type="boolean" value="true"/>
+        <Property name="rolloverEnabled" type="boolean" value="false"/>
+        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/vistacontrolador/b_on.png"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="Boton_pulsarItemStateChanged"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Boton_pulsarActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="Boton_radio_op1_espejo">
@@ -375,14 +407,40 @@
     <Component class="javax.swing.JToggleButton" name="Boton_pulsar_espejo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Paul\Documents\GitHub\pr-ctica-2-4-elementos-interfaz-mixta-PaulCarvajal\SOL\practica2-4\src\vistacontrolador\b_off.png"/>
+          <Image iconType="3" name="/vistacontrolador/b_off.png"/>
         </Property>
         <Property name="enabled" type="boolean" value="false"/>
+        <Property name="rolloverEnabled" type="boolean" value="false"/>
+        <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/vistacontrolador/b_on.png"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
     </Component>
-    <Component class="javax.swing.JProgressBar" name="jProgressBar1">
+    <Component class="javax.swing.JLabel" name="Imagen_Check">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/vistacontrolador/Check_chiquito.jpg"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Texto_Confirmacion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Correo verificado correctamente"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Imagen_Check_espejo">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/vistacontrolador/Check_chiquito.jpg"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Texto_Confirmacion_espejo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Correo verificado correctamente"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
