@@ -9,4 +9,4 @@
 | 06             | Verificar Barra deslizadora              | Deslizar barra                   | Se duplican en la otra mitad                                                     | OK|
 | 07             | Verificar Toggle Botón (JToggleButton)   | Pulsar botón                     | Se duplican en la otra mitad                                                     | OK|
 | 08             | Validación campo correo                  | Escribir un correo electrónico en formato incorrecto | Se muestra un borde en color rojo hasta que su formato sea correcto. | OK|
-| 09             | Validación campo correo                  | Escribir un correo electrónico usando su formato con @ | Se valida mostrando un icono verde y un mensaje en la barra de estado. | OK/No cumple|
+| 09             | Validación campo correo                  | Escribir un correo electrónico usando su formato con @ | Se valida mostrando un icono verde y un mensaje en la barra de estado. | OK|
