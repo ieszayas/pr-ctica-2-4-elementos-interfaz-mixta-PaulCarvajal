@@ -414,7 +414,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private void Boton_radio_op1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op1ActionPerformed
         Boton_radio_op1_espejo.setSelected(Boton_radio_op1.isSelected());
         //Seleccion de botones para solo poder selccionar uno
-        //apagarOtrosBotones(Boton_radio_op1);
+       apagarOtrosBotones(Boton_radio_op1);
     }//GEN-LAST:event_Boton_radio_op1ActionPerformed
 
     private void apagarOtrosBotones(JRadioButton boton) {
@@ -459,13 +459,13 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private void Boton_radio_op2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op2ActionPerformed
         Boton_radio_op2_espejo.setSelected(Boton_radio_op2.isSelected());
         //Seleccion de botones para solo poder seleccionar uno
-        //apagarOtrosBotones(Boton_radio_op2);
+        apagarOtrosBotones(Boton_radio_op2);
     }//GEN-LAST:event_Boton_radio_op2ActionPerformed
 
     private void Boton_radio_op3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op3ActionPerformed
         Boton_radio_op3_espejo.setSelected(Boton_radio_op3.isSelected());
         //Seleccion de botones para solo poder seleccionar uno
-        //apagarOtrosBotones(Boton_radio_op3);
+        apagarOtrosBotones(Boton_radio_op3);
     }//GEN-LAST:event_Boton_radio_op3ActionPerformed
 
     private void Caja_TextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja_TextoActionPerformed
@@ -545,12 +545,10 @@ public class Ventana_Principal extends javax.swing.JFrame {
     Texto_Confirmacion.setVisible(true);
     Texto_Confirmacion_espejo.setVisible(true);
 }
-
     private void Imagen_visible() {
     Imagen_Check.setVisible(true);
     Imagen_Check_espejo.setVisible(true);
 }
-
     private void textoImagenBordePorDefecto() {
     Border defecto = BorderFactory.createLineBorder(Color.GRAY);
     Caja_correo.setBorder(defecto);
