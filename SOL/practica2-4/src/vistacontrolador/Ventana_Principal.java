@@ -32,10 +32,18 @@ public class Ventana_Principal extends javax.swing.JFrame {
         Texto_Confirmacion.setVisible(false);
         Texto_Confirmacion_espejo.setVisible(false);
         
-//        ButtonGroup grupoBotones = new ButtonGroup();
-//        grupoBotones.add(Boton_radio_op1);
-//        grupoBotones.add(Boton_radio_op2);
-//        grupoBotones.add(Boton_radio_op2);
+        //Agrupacion de botones para que solo se pueda seleccionar uno
+        
+        ButtonGroup grupoBotones = new ButtonGroup();
+        grupoBotones.add(Boton_radio_op1);
+        grupoBotones.add(Boton_radio_op2);
+        grupoBotones.add(Boton_radio_op3);
+        
+        ButtonGroup grupoBotones_espejo = new ButtonGroup();
+        grupoBotones_espejo.add(Boton_radio_op1_espejo);
+        grupoBotones_espejo.add(Boton_radio_op2_espejo);
+        grupoBotones_espejo.add(Boton_radio_op3_espejo);
+        
     }
 
     /**
@@ -420,62 +428,64 @@ public class Ventana_Principal extends javax.swing.JFrame {
     private void Boton_radio_op1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op1ActionPerformed
         Boton_radio_op1_espejo.setSelected(Boton_radio_op1.isSelected());
         //Seleccion de botones para solo poder selccionar uno
-       apagarOtrosBotones(Boton_radio_op1);
+       //apagarOtrosBotones(Boton_radio_op1);
     }//GEN-LAST:event_Boton_radio_op1ActionPerformed
-//    private void recorrerBotones(){
-//        for (Object object : grupoBotones.size()) {
-//            
-//        }
-//    }
-    private void apagarOtrosBotones(JRadioButton boton) {
-        int esboton = 0;
-        
-        if (boton.equals(Boton_radio_op1)) {
-            esboton = 1;
-        } 
-        if (boton.equals(Boton_radio_op2)) {
-            esboton = 2;
-        } 
-        if (boton.equals(Boton_radio_op3)) {
-            esboton = 3;
-        }
 
-        // apagar los otros botones
-        switch (esboton) {
-            case 1:
-                Boton_radio_op2.setSelected(false);
-                Boton_radio_op2_espejo.setSelected(Boton_radio_op2.isSelected());
-                Boton_radio_op3.setSelected(false);
-                Boton_radio_op3_espejo.setSelected(Boton_radio_op3.isSelected());
-                break;
-            case 2:
-                Boton_radio_op1.setSelected(false);
-                Boton_radio_op1_espejo.setSelected(Boton_radio_op1.isSelected());
-                Boton_radio_op3.setSelected(false);
-                Boton_radio_op3_espejo.setSelected(Boton_radio_op3.isSelected());
-                break;
-            case 3:
-                Boton_radio_op1.setSelected(false);
-                Boton_radio_op1_espejo.setSelected(Boton_radio_op1.isSelected());
-                Boton_radio_op2.setSelected(false);
-                Boton_radio_op2_espejo.setSelected(Boton_radio_op2.isSelected());
-                break;
-            default:
-                // Si ningún botón coincide, no hace nada
-                break;
-        }
+    /***
+     * Hace que solo puedas seleccionar una opcion de los JradioButton
+     * se puede hacer más facil agrupando los botones en un ButtonGroup
+     * @param boton 
+     */
+    private void apagarOtrosBotones(JRadioButton boton) {
+//        int esboton = 0;
+//        
+//        if (boton.equals(Boton_radio_op1)) {
+//            esboton = 1;
+//        } 
+//        if (boton.equals(Boton_radio_op2)) {
+//            esboton = 2;
+//        } 
+//        if (boton.equals(Boton_radio_op3)) {
+//            esboton = 3;
+//        }
+//
+//        // apagar los otros botones
+//        switch (esboton) {
+//            case 1:
+//                Boton_radio_op2.setSelected(false);
+//                Boton_radio_op2_espejo.setSelected(Boton_radio_op2.isSelected());
+//                Boton_radio_op3.setSelected(false);
+//                Boton_radio_op3_espejo.setSelected(Boton_radio_op3.isSelected());
+//                break;
+//            case 2:
+//                Boton_radio_op1.setSelected(false);
+//                Boton_radio_op1_espejo.setSelected(Boton_radio_op1.isSelected());
+//                Boton_radio_op3.setSelected(false);
+//                Boton_radio_op3_espejo.setSelected(Boton_radio_op3.isSelected());
+//                break;
+//            case 3:
+//                Boton_radio_op1.setSelected(false);
+//                Boton_radio_op1_espejo.setSelected(Boton_radio_op1.isSelected());
+//                Boton_radio_op2.setSelected(false);
+//                Boton_radio_op2_espejo.setSelected(Boton_radio_op2.isSelected());
+//                break;
+//            default:
+//                // Si ningún botón coincide, no hace nada
+//                break;
+//        }
+          
     }
 
     private void Boton_radio_op2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op2ActionPerformed
         Boton_radio_op2_espejo.setSelected(Boton_radio_op2.isSelected());
         //Seleccion de botones para solo poder seleccionar uno
-        apagarOtrosBotones(Boton_radio_op2);
+        //apagarOtrosBotones(Boton_radio_op2);
     }//GEN-LAST:event_Boton_radio_op2ActionPerformed
 
     private void Boton_radio_op3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op3ActionPerformed
         Boton_radio_op3_espejo.setSelected(Boton_radio_op3.isSelected());
         //Seleccion de botones para solo poder seleccionar uno
-        apagarOtrosBotones(Boton_radio_op3);
+        //apagarOtrosBotones(Boton_radio_op3);
     }//GEN-LAST:event_Boton_radio_op3ActionPerformed
 
     private void Caja_TextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja_TextoActionPerformed
