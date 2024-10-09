@@ -7,6 +7,7 @@ package vistacontrolador;
 import java.awt.Color;
 import javax.crypto.AEADBadTagException;
 import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -30,6 +31,11 @@ public class Ventana_Principal extends javax.swing.JFrame {
         Imagen_Check_espejo.setVisible(false);
         Texto_Confirmacion.setVisible(false);
         Texto_Confirmacion_espejo.setVisible(false);
+        
+//        ButtonGroup grupoBotones = new ButtonGroup();
+//        grupoBotones.add(Boton_radio_op1);
+//        grupoBotones.add(Boton_radio_op2);
+//        grupoBotones.add(Boton_radio_op2);
     }
 
     /**
@@ -410,13 +416,17 @@ public class Ventana_Principal extends javax.swing.JFrame {
 //        Boton_pulsar_espejo.setIcon(Boton_pulsar.getIcon());
 
     }//GEN-LAST:event_Boton_pulsarItemStateChanged
-
+    
     private void Boton_radio_op1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Boton_radio_op1ActionPerformed
         Boton_radio_op1_espejo.setSelected(Boton_radio_op1.isSelected());
         //Seleccion de botones para solo poder selccionar uno
        apagarOtrosBotones(Boton_radio_op1);
     }//GEN-LAST:event_Boton_radio_op1ActionPerformed
-
+//    private void recorrerBotones(){
+//        for (Object object : grupoBotones.size()) {
+//            
+//        }
+//    }
     private void apagarOtrosBotones(JRadioButton boton) {
         int esboton = 0;
         
